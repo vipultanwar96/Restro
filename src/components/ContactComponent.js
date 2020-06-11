@@ -38,15 +38,16 @@ class Contact extends Component {
             telnum: '',
             email: '',
         };
-        if(this.state.touched.firstname && firstname.length <3)
+        //if(this.state.touched.firstname && firstname.length <3)
+        if(firstname.length <3)
             errors.firstname = "First Name should be greater than or equal to 3";
-        if(this.state.touched.lastname && lastname.length <3)
-            errors.firstname = "First Name should be greater than or equal to 3";
+        if(lastname.length <3)
+            errors.lastname = "First Name should be greater than or equal to 3";
             // here more validation require for email
-        if(this.state.touched.email && email.length <3)
-            errors.firstname = "First Name should be greater than or equal to 3";
+        if(email.length <3)
+            errors.email = "First Name should be greater than or equal to 3";
         const reg  = /^\d+$/;
-        if(this.state.touched.telnum && !reg.test(telnum))
+        if(!reg.test(telnum))
             errors.telnum = "Tel no. should only be digit";
     }
     handleInputChange(event)
