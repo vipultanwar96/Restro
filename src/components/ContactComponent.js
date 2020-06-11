@@ -18,22 +18,24 @@ class Contact extends Component {
 
         this.handleInputChange = this.handleInputChange.bind(this);
         this.handleSubmit = this.handleSubmit.bind(this);
-
-        handleInputChange(event)
-        {
-            const target = event.target;
-            const value = target.type === 'checkbox' ? target.checked : target.value;
-            const name = target.name;
-            this.setState({ [name]: value });
-
-        }
-        handleSubmit(event)
-        {
-            console.log('current state is: '+ JSON.stringfy(this.state));
-            alert("current state is : "+JSON.stringify(this.state));
-            event.preventDefault();
-        }
+    
     }
+
+    handleInputChange(event)
+    {
+        const target = event.target;
+        const value = target.type === 'checkbox' ? target.checked : target.value;
+        const name = target.name;
+        this.setState({ [name]: value });
+
+    }
+    handleSubmit(event)
+    {
+        console.log('current state is: '+ JSON.stringfy(this.state));
+        alert("current state is : "+JSON.stringify(this.state));
+        event.preventDefault();
+    }
+
     render()
     {
         return(   
@@ -151,9 +153,9 @@ class Contact extends Component {
                     </div>
                     <div className="col-12 col-sm-11 offset-sm-1">
                         <div className="btn-group" role="group">
-                            <a role="button" className="btn btn-primary" href="tel:+85212345678"><i className="fa fa-phone"></i> Call</a>
-                            <a role="button" className="btn btn-info"><i className="fa fa-skype"></i> Skype</a>
-                            <a role="button" className="btn btn-success" href="mailto:confusion@food.net"><i className="fa fa-envelope-o"></i> Email</a>
+                            <a role="button" className="btn btn-primary" href="/"><i className="fa fa-phone"></i> Call</a>
+                            <a role="button" className="btn btn-info" href="/"><i className="fa fa-skype"></i> Skype</a>
+                            <a role="button" className="btn btn-success" href="/"><i className="fa fa-envelope-o"></i> Email</a>
                         </div>
                     </div>
                 </div>
