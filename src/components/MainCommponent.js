@@ -69,6 +69,7 @@ class Main extends Component
                     <Redirect to="/home" />
                 </Switch>
                 <Menu dishes={this.state.dishes} onclick={(dishesId) => this.onDishSelect(dishesId)}/>
+                {/*  */}
                 <DishDetail dish={this.state.dishes.filter((dish) => dish.id === this.state.selectedDish)[0]} />
                 <Footer />
             </div>
